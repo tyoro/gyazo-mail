@@ -11,7 +11,7 @@ pear:Mail,Mail_Mime,HTTP_Request
 手元の環境ではpostfixでやったので、その方法だけ記載します。
 aliasesに以下のような形で記載。
 
-gyazo: | "/usr/bin/php /{設置先}/gyazo-mail/post.php  > /dev/null 2>&1"
+gyazo: | "/usr/bin/php /{設置先}/gyazo-mail/post.php > /dev/null 2>&1"
 
 aliasesに設定するまでのアレコレはググれ。
 
@@ -23,6 +23,10 @@ senderは送信者メアドでこれに一致してないと届いたメール�
 認証はかけてない場合は項目そのものを書かなくていい
 
 基本的に送信メアドに返送するが、特定のメアドへの送信を希望する場合はreceiverのmailにメアドを書けばいける(かもしれないがテストしてない
+
+○チップス
+aliasesの記述サンプルはdev/nullに投げてるけど、プログラム自体はデバッグ出力で情報吐いてるので、
+> /tmp/hoge  とかに吐きだせば、直前のメールがどのように処理されたかが分かる。
 
 ○ライセンス
 WTFPL http://sam.zoy.org/wtfpl/
