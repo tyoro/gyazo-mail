@@ -104,6 +104,10 @@ $conf = Spyc::YAMLLoad( '/usr/local/sfw/gyazo-mail/conf.yml' );
 			if( isset( $conf[ $account ][ 'receiver' ][ 'mail' ] ) ){
 				$receiver = $conf[ $account ][ 'receiver' ][ 'mail' ];
 			}
+			if( isset( $conf[ $account ][ 'receiver' ][ 'facebook' ] ) ){
+				$receiver = $conf[ $account ][ 'receiver' ][ 'facebook' ];
+				$mailfrom = "From:".$conf['facebook-sender'];
+			}
 		}
 
         //-- debug print start
@@ -111,7 +115,7 @@ $conf = Spyc::YAMLLoad( '/usr/local/sfw/gyazo-mail/conf.yml' );
         //-- debug print end
 
 		//帰ってきたURLを、送信元メールアドレスに送信する
-		if( mb_send_mail( $receiver, 'gyazo return', join( $response,"\n"), $mailfrom ) ){
+		if( mb_send_mail( $receiver, $conf['subject'], join( $response,"\n"), $mailfrom ) ){
 			print "success send mail\n";
 		}else{
 			print "faled  send mail\n";

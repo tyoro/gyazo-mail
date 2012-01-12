@@ -1,3 +1,9 @@
+
+subject: 'gyazo return'
+#facebook-sender: 'hoge@example.com'
+
+# account setting
+
 gyazo:
   sender: ['test@example.com', 'hoge@example.co.jp' ]
   upload_server: 'example.com'
@@ -7,6 +13,7 @@ gyazo:
     auth_pw: 'xxxxxxxxx'
 #  receiver:
 #    mail: ''
+#    facebook: ''
 
 hoge:
   sender: ['piyo@example.com']
