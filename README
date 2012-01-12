@@ -7,6 +7,8 @@ gyazo mail
 pear:Mail,Mail_Mime,HTTP_Request
 以下のエントリの下部にあるReceiptMailDecoderクラスの定義されたファイルを"ReceiptMailDecoder.class.php"という名前で、lib/以下に置く。
 
+http://d.hatena.ne.jp/ya--mada/20080415/1208318475
+
 ○動作方法
 手元の環境ではpostfixでやったので、その方法だけ記載します。
 aliasesに以下のような形で記載。
