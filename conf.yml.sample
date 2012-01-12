@@ -1,0 +1,10 @@
+gyazo:
+  sender: ['test@example.com', 'hoge@example.co.jp' ]
+  upload_server: 'example.com'
+  upload_path: '/gyazo-up.php'
+  use_auth:
+    auth_id: 'hoge'
+    auth_pw: 'xxxxxxxxx'
+#  receiver:
+#    mail: ''
+
