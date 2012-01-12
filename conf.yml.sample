@@ -8,3 +8,8 @@ gyazo:
 #  receiver:
 #    mail: ''
 
+hoge:
+  sender: ['piyo@example.com']
+  upload_server: 'example.co.jp'
+  upload_path: '/-up.php'
+

@@ -104,10 +104,6 @@ $conf = Spyc::YAMLLoad( '/usr/local/sfw/gyazo-mail/conf.yml' );
 			if( isset( $conf[ $account ][ 'receiver' ][ 'mail' ] ) ){
 				$receiver = $conf[ $account ][ 'receiver' ][ 'mail' ];
 			}
-			if( isset( $conf[ $account ][ 'receiver' ][ 'facebook' ] ) ){
-				$receiver = $conf[ $account ][ 'receiver' ][ 'facebook' ];
-				$mailfrom = "From:orz@tyo.ro";
-			}
 		}
 
         //-- debug print start

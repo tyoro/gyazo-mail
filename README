@@ -1,0 +1,29 @@
+gyazo mail
+
+メールで送った写真等を手持ちのgyazo互換サーバーに上げる何か(公式に上げれるかは知らん
+アップされたURLはメールの返信の形で届きます。
+
+○必須ライブラリ
+pear:Mail,Mail_Mime,HTTP_Request
+以下のエントリの下部にあるReceiptMailDecoderクラスの定義されたファイルを"ReceiptMailDecoder.class.php"という名前で、lib/以下に置く。
+
+○動作方法
+手元の環境ではpostfixでやったので、その方法だけ記載します。
+aliasesに以下のような形で記載。
+
+gyazo: | "/usr/bin/php /{設置先}/gyazo-mail/post.php  > /dev/null 2>&1"
+
+aliasesに設定するまでのアレコレはググれ。
+
+○設定
+conf.yml.sampleをconf.ymlにrenameして適当に頑張れ。
+
+aliasesの最初のgyazoってのはメールの@以前の部分だが、confのインデントない部分(sampleでgyazoやpiyoの部分)がそれに相当する。
+senderは送信者メアドでこれに一致してないと届いたメールは破棄される。
+認証はかけてない場合は項目そのものを書かなくていい
+
+基本的に送信メアドに返送するが、特定のメアドへの送信を希望する場合はreceiverのmailにメアドを書けばいける(かもしれないがテストしてない
+
+○ライセンス
+WTFPL http://sam.zoy.org/wtfpl/
+
